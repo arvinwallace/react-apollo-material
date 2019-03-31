@@ -4,11 +4,12 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { install } from '@material-ui/styles';
 
 import App from './App';
 
 import registerServiceWorker from './registerServiceWorker';
-
+install();
 const cache = new InMemoryCache();
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';

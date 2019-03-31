@@ -3,7 +3,8 @@
 }
 
 .row:hover {
-  background-color: lightblue;
+  background-color: rgba(45,45,45,0.98);
+  color: white;
 }
 
 .row_selected {
@@ -12,4 +13,32 @@
 
 .row_selected:hover {
   background-color: orange;
+}
+
+.button-container {
+  display: flex;
+}
+a {
+  color: #f50057;
+}
+
+a:visited {
+  color: #444;
+}
+@media screen and (max-width: 600px) {
+  .button-container  {
+    display: block;
+    width: 100%;
+  }
+}
+.MuiToolbar-regular-53 {
+  min-height: 0px !important;
+}
+
+.MuiPrivateTabIndicator-colorSecondary-196 {
+  display: none;
+}
+ul {
+  list-style: none;
+  padding-inline-start: inherit;
 }
