@@ -1,5 +1,6 @@
 .row {
   padding: 5px;
+  transition: 0.1s;
 }
 
 .row:hover {
@@ -42,3 +43,7 @@ ul {
   list-style: none;
   padding-inline-start: inherit;
 }
+
+/* .WithStyles-DialogContent--root-466 {
+  min-width: 240px !important;
+} */

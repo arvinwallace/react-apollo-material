@@ -16,7 +16,8 @@ const styles = theme => ({
     marginRight: theme.spacing.unit,
   },
   lor: {
-    color: '#f50057'
+    color: '#f50057',
+    paddingRight: '30px;'
   }
 });
 

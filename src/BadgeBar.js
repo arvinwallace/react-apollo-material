@@ -5,6 +5,7 @@ import Badge from '@material-ui/core/Badge';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import TopDialog from './TopDialog'
 
 const styles = theme => ({
   margin: {
@@ -19,7 +20,7 @@ const styles = theme => ({
 
 function BadgeBar(props) {
   const { classes, commits, stars, topFive } = props;
-  console.log('tops', topFive)
+  // console.log('tops', topFive)
   return (
     <div>
       <AppBar position="static" className={classes.margin}>
@@ -38,7 +39,8 @@ function BadgeBar(props) {
               </Badge>
             }
           />
-          <Tab value={0} onClick={() => alert("goose")} label="Top 5 Contributors" />
+          
+            <TopDialog topFive={topFive}/>
         </Tabs>
       </AppBar>
     </div>

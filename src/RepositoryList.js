@@ -5,6 +5,9 @@ import ActionButton from './ActionButtons'
 import BadgeBar from './BadgeBar'
 
 
+/* Helper function to repackage contributors, commits, and avatarUrl
+  into an array of objects sorted by largest # of commits and sliced(5) */
+
 const topFive = (ray) => {
   const group = ray.reduce((acc,node) => {
     const author = node.author.name;
@@ -17,6 +20,8 @@ const topFive = (ray) => {
   })
   return rayGroup.sort((a,b) => b.commits - a.commits).slice(0,5)
 }
+
+/* Default Component */
 
 const RepositoryList = ({
   repositories,
@@ -63,9 +68,10 @@ const RepositoryList = ({
   </ul>
 );
 
+/* Select */
 
 const Select = ({ id, isSelected, toggleSelectRepository }) => (
-  <div onClick={() => toggleSelectRepository(id, isSelected)}>
+  <div  onClick={() => toggleSelectRepository(id, isSelected)}>
     <ActionButton
       select={isSelected ? 'Deselect' : 'Select'}  
     />

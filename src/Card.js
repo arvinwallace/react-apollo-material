@@ -10,6 +10,7 @@ const styles = {
   card: {
     minWidth: 275,
     backgroundColor: "inherit",
+    transition: '0.2s',
     '&:hover': {
       color: "white",
    },
@@ -33,9 +34,7 @@ const styles = {
 };
 
 function SimpleCard(props) {
-  const { classes, name, url } = props;
-  const bull = <span className={classes.bullet}>•</span>;
-
+  const { classes, name } = props;
   return (
     <Card className={classes.card}>
       <CardContent>
