@@ -39,29 +39,28 @@ const RepositoryList = ({
       if (isSelected) {
         rowClassName.push('row_selected');
       }
-      return (
-      
+      return ( 
         <li className={rowClassName.join(' ')} key={node.id}>
-        <SimpleCard name={node.name} url={node.url}>
-        <div className="button-container">
-          <Select
-            id={node.id}
-            isSelected={isSelected}
-            toggleSelectRepository={toggleSelectRepository}
-          />{' '}
-            <ActionButton href={node.url}>
-            <a href={node.url}>{node.name}</a>{' '}
-            </ActionButton>
-            {!node.viewerHasStarred && 
-                <Star id={node.id} />
-            }
-          </div>
-          <BadgeBar 
-            commits={commits} 
-            stars={stars} 
-            topFive={topContributors}
-          />
-        </SimpleCard>
+          <SimpleCard name={node.name} url={node.url}>
+          <div className="button-container">
+            <Select
+              id={node.id}
+              isSelected={isSelected}
+              toggleSelectRepository={toggleSelectRepository}
+            />{' '}
+              <ActionButton href={node.url}>
+              <a href={node.url}>{node.name}</a>{' '}
+              </ActionButton>
+              {!node.viewerHasStarred && 
+                  <Star id={node.id} />
+              }
+            </div>
+            <BadgeBar 
+              commits={commits} 
+              stars={stars} 
+              topFive={topContributors}
+            />
+          </SimpleCard>
         </li>
       );
     })}

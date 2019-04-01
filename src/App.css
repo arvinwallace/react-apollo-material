@@ -4,7 +4,7 @@
 }
 
 .row:hover {
-  background-color: rgba(45,45,45,0.98);
+  background-color: rgba(45,45,45,0.64);
   color: white;
 }
 

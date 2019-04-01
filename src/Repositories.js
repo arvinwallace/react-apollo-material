@@ -8,7 +8,6 @@ class Repositories extends React.Component {
 
   toggleSelectRepository = (id, isSelected) => {
     let { selectedRepositoryIds } = this.state;
-    console.log("selection!!")
     selectedRepositoryIds = isSelected
       ? selectedRepositoryIds.filter(itemId => itemId !== id)
       : selectedRepositoryIds.concat(id);

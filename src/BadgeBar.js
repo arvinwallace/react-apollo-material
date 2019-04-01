@@ -20,7 +20,6 @@ const styles = theme => ({
 
 function BadgeBar(props) {
   const { classes, commits, stars, topFive } = props;
-  // console.log('tops', topFive)
   return (
     <div>
       <AppBar position="static" className={classes.margin}>

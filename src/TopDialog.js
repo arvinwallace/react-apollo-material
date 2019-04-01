@@ -70,7 +70,6 @@ class TopDialog extends React.Component {
 
   render() {
     const {topFive} = this.props;
-    console.log('tippy', topFive)
     return (
       <div>
 
